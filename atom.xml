@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>君安</title>
+  
+  <subtitle>Lao Xu&#39;s Happy World</subtitle>
+  <link href="http://laoxu.fun/atom.xml" rel="self"/>
+  
+  <link href="http://laoxu.fun/"/>
+  <updated>2022-06-30T10:20:25.393Z</updated>
+  <id>http://laoxu.fun/</id>
+  
+  <author>
+    <name>老许</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://laoxu.fun/2022/06/30/vue/"/>
+    <id>http://laoxu.fun/2022/06/30/vue/</id>
+    <published>2022-06-30T04:12:39.940Z</published>
+    <updated>2022-06-30T10:20:25.393Z</updated>
+    
+    <content type="html"><![CDATA[<p>等更新哈 ~<br>等更新哈 ~<br>等更新哈 ~<br>等更新哈 ~<br>等更新哈 ~</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let vue = new Vue()</span><br></pre></td></tr></table></figure><span id="more"></span>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;等更新哈 ~&lt;br&gt;等更新哈 ~&lt;br&gt;等更新哈 ~&lt;br&gt;等更新哈 ~&lt;br&gt;等更新哈 ~&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;let vue = new Vue()&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="about" scheme="http://laoxu.fun/categories/about/"/>
+    
+    
+    <category term="about" scheme="http://laoxu.fun/tags/about/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://laoxu.fun/2022/06/30/hello-world/"/>
+    <id>http://laoxu.fun/2022/06/30/hello-world/</id>
+    <published>2022-06-30T00:25:47.881Z</published>
+    <updated>2022-06-30T10:09:13.165Z</updated>
+    
+    <content type="html"><![CDATA[<p>老许的欢乐世界</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;老许的欢乐世界&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
