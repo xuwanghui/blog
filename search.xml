@@ -7,24 +7,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/06/30/vue/</url>
-    <content><![CDATA[<p>等更新哈 ~<br>
-等更新哈 ~<br>
-等更新哈 ~<br>
-等更新哈 ~<br>
-等更新哈 ~</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let vue = new Vue()</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>vue</category>
-      </categories>
-      <tags>
-        <tag>vue</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Git 学习</title>
     <url>/2022/07/02/git/</url>
     <content><![CDATA[<h4 id="Git-历史">Git 历史</h4>
@@ -39,13 +21,13 @@
 <p>其实在当时已经存在一些版本控制的工具的了，像cvs，svn等，但是这些工具都是要收费的，而且使用的还是集中式版本管理方式。这就受到了Linus的唾弃；</p>
 <p>后来Linus选择了BitKeeper分布式版本控制工具作为他们的版本管理工具，这个系统的研发公司也是出于人道博爱的精神给他们免费使用了；</p>
 <p>大家都知道linux系统是很牛逼的，所以能参与维护的都不是一般的攻城狮呀，有一天团队里面的一个人就想着破解BitKeeper的协议呀，当时也是被它的研发公司发现了，他们就骂骂咧咧地收回了给他们的使用权；之后就是Linus被迫自己花了半个月时间用C写了git这个伟大的分布式版本控制工具了；</p>
-<p><img data-src="C:%5CUsers%5Cxu_wa%5CDesktop%5Cblog%5Csource_posts%5Cgit-assets%5Cimage-20220702222921215.png" alt="image-20220702222921215"></p>
+<p><img data-src="image-20220703002156421.png" alt="Linux版本控制历史"></p>
 <p><strong>所以Git的产生就是为了解决团队开发效率问题以及开发版本的管理的</strong></p>
 <p>3、第二个问题提到的分布式和集中式有什么区别？<br>
 答：集中式：拥有一台中央处理服务器，每个电脑处理前都需要连接中央处理服务器去拉取一个版本库，改完再推回去；</p>
 <p><img data-src="https://img-blog.csdnimg.cn/0c233fc1dad9408d97f48f525c58b770.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6IuO5769,size_20,color_FFFFFF,t_70,g_se,x_16" alt="集中式"></p>
 <p>分布式：去中心化，没有中央处理服务器，每个人的电脑都是完整的一个版本库，每个电脑都是独立连接的；</p>
-<p><img data-src="https://img-blog.csdnimg.cn/9effe8e3380a4507b8a0a2cca932ea05.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6IuO5769,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p><img data-src="https://img-blog.csdnimg.cn/9effe8e3380a4507b8a0a2cca932ea05.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6IuO5769,size_20,color_FFFFFF,t_70,g_se,x_16" alt="分布式"></p>
 <h4 id="Git-简介">Git 简介</h4>
 <p>Git是目前世界上最先进的分布式版本控制系统，是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。</p>
 <p>Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。</p>
@@ -93,6 +75,24 @@
       </categories>
       <tags>
         <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/06/30/vue/</url>
+    <content><![CDATA[<p>等更新哈 ~<br>
+等更新哈 ~<br>
+等更新哈 ~<br>
+等更新哈 ~<br>
+等更新哈 ~</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let vue = new Vue()</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
       </tags>
   </entry>
 </search>
