@@ -6,7 +6,7 @@
   <link href="http://laoxu.fun/atom.xml" rel="self"/>
   
   <link href="http://laoxu.fun/"/>
-  <updated>2022-07-07T14:46:31.097Z</updated>
+  <updated>2022-07-07T14:52:24.280Z</updated>
   <id>http://laoxu.fun/</id>
   
   <author>
@@ -17,22 +17,29 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>webpack 学习</title>
     <link href="http://laoxu.fun/2022/07/07/webpack/"/>
     <id>http://laoxu.fun/2022/07/07/webpack/</id>
     <published>2022-07-07T11:56:18.721Z</published>
-    <updated>2022-07-07T14:46:31.097Z</updated>
+    <updated>2022-07-07T14:52:24.280Z</updated>
     
-    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: webpack 学习</span><br><span class="line">tags:</span><br><span class="line">- webpack</span><br><span class="line">categories:</span><br><span class="line">- webpack</span><br></pre></td></tr></table></figure><h4 id="什么是构建工具">什么是构建工具</h4><p><strong>事实上随着前端的快速发展，目前前端的开发已经变的越来越复杂了：</strong></p><p>比如开发过程中我们需要通过模块化的方式来开发；</p><p>比如也会使用一些高级的特性来加快我们的开发效率或者安全性，比如通过ES6+、TypeScript开发脚本逻辑， 通过sass、less等方式来编写css样式代码；</p><p>比如开发过程中，我们还希望实时的监听文件的变化来并且反映到浏览器上，提高开发的效率；</p><p>比如开发完成后我们还需要将代码进行压缩、合并以及其他相关的优化；</p><p>等等….</p><p>上述这些工作理论上是可以人工完成的，但是它繁琐，工作量大，本质是无意义的劳动，人为的错误也随着流程的增加而增加了更多的出错率。所以每一个团队都希望有一种工具，能帮助整个团队在开发中能精简流程、提高效率、减少错误率，管理各种小工具之间的错综复杂的关系或者配置，这种工具就叫构建工具。</p><p>说到构建工具，我往往会在前面加**「自动化」**三个字，因为构建工具就是用来让我们不再做机械重复的事情，解放我们的双手的(my god)。所以构建工具作用是：提升项目性能，提高开发效率。</p><h4 id="构建工具的发展">构建工具的发展</h4><p>有了工具能满足基本的打包工作，对于开发人员而言总是需要更精益求精。就像在一辆能发动的车上去安装各种零件来提升使用者的体验。这些零件就是构建工具所需要的插件，这些插件对提升开发效率很有帮助，包括语法转换（Babel），模板热更新（HotModuleReplacementPlugin），清理重复的打包的文件（clean-webpack-plugin）等等。</p><p>构建工具目前来说还在处于不停发展的阶段，但是相应的打包技术已经很成熟。 本次主要介绍市面上比较火热的Grunt， Webpack, Vite这三个打包工具之间的对比和它们的优势。</p><h4 id="构建工具介绍">构建工具介绍</h4><p>Grunt: 是一个优化前端的开发流程的工具。<br>配置一系列的task，定义task处理的事务（例如文件压缩合并、启动server、版本控制等），然后定义执行顺序，来让Grunt执行这些task，从而构建项目的整个前端开发流程。<br>工作方式：<br><img data-src="https://segmentfault.com/img/bVcXSBt" alt="image.png"></p><p>Wepack: 是一种模块化的解决方案。更强调模块化。<br>把你的项目当做一个整体，通过一个指定的主文件名（index.js, 一般是入口文件），webpack 将从这个文件开始找到你的项目所依赖的文件，使用loaders 来处理它们，最后打包为一个浏览器可识别的js 文件。<br><img data-src="https://segmentfault.com/img/bVcXSBQ" alt="image.png"></p><p>Vite: 一种新型前端构建工具,它区别与不同的打包工具,它在开发环境中不对项目进行整体打包。<br>原因：当我们的构建的项目越来越庞大时，对整个项目进行资源整合的时间会变长，如果有数千个模块的项目在进行构建时甚至需要几分钟才能启动开发服务器。所以vite解决了在开发过程中需要等待整个项目打包这一段过程，让开发时更加丝滑。<br>依赖：使用esbuild（GO编写）预构建依赖，比 JavaScript 编写的打包器预构建依赖快 10-100 倍。<br>源码：在浏览器请求资源时-&gt; vite转换一些非js文件-&gt;动态导入代码。<br>源码利用浏览器的协商缓存（304 Not Modified），依赖模块请求则会通过 Cache-Control: max-age=31536000, immutable 进行强缓存，保持热更新的速度。<br><img data-src="https://segmentfault.com/img/bVcXSCe" alt="image.png"></p><h4 id="如何选择适合的构建工具？">如何选择适合的构建工具？</h4><p>Grunt对于一些中小型项目而言更加轻便和灵活，如果只针对代码压缩合并，Grunt就可以满足要求，发展历程长，基本是稳定的。但是如果要处理庞大的项目文件，特别是处理多种类型的资源文件，强调模块开发，Webpack则更适合这个场景。Webpack对于中大型项目而言是更加稳定的，文档资料和迭代速度也很快。当然这对开发人员而言也是挺头疼的，隔一段时间就需要去适应文档的配置。Vite作为一门新的构建技术，想要它去构建一门稳定的中大型项目有点冒险，虽然已经发布稳定版本，但是还是会有一些潜在的风险，等它更多人推广后使用更加稳妥，但是对于平时构建一些个人网站和项目等使用vite，感受一下它的便捷也可以。</p><h4 id="什么是webpack">什么是webpack</h4><p>webpack是一种前端资源构建工具，一个静态模块打包器(module bundler)。 在 webpack看来,前端的所有资源文件(js/json/css/img/less/…)都会作为模块处理。 它将根据模块的依赖关系进行静态分析，打包生成对应的静态资源(bundle)。</p><p><img data-src="image-20220707224530157.png" alt=""></p><h4 id="理解module、chunk、bundle">理解module、chunk、bundle</h4><p>在 webpack 中，一切皆module，任何一个文件都可以看成是module。js、css、图片等都是module<br>webpack 会将入口文件以及它的依赖引入到一个 chunk 中，然后进过一系列处理打包成bundle</p><p><img data-src="https://upload-images.jianshu.io/upload_images/1429074-480bfe042659b296.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/772/format/webp" alt="img"></p>]]></content>
+    <content type="html"><![CDATA[<h4 id="什么是构建工具">什么是构建工具</h4><p><strong>事实上随着前端的快速发展，目前前端的开发已经变的越来越复杂了：</strong></p><p>比如开发过程中我们需要通过模块化的方式来开发；</p><p>比如也会使用一些高级的特性来加快我们的开发效率或者安全性，比如通过ES6+、TypeScript开发脚本逻辑， 通过sass、less等方式来编写css样式代码；</p><p>比如开发过程中，我们还希望实时的监听文件的变化来并且反映到浏览器上，提高开发的效率；</p><p>比如开发完成后我们还需要将代码进行压缩、合并以及其他相关的优化；</p><p>等等….</p><p>上述这些工作理论上是可以人工完成的，但是它繁琐，工作量大，本质是无意义的劳动，人为的错误也随着流程的增加而增加了更多的出错率。所以每一个团队都希望有一种工具，能帮助整个团队在开发中能精简流程、提高效率、减少错误率，管理各种小工具之间的错综复杂的关系或者配置，这种工具就叫构建工具。</p><p>说到构建工具，我往往会在前面加**「自动化」**三个字，因为构建工具就是用来让我们不再做机械重复的事情，解放我们的双手的(my god)。所以构建工具作用是：提升项目性能，提高开发效率。</p><h4 id="构建工具的发展">构建工具的发展</h4><p>有了工具能满足基本的打包工作，对于开发人员而言总是需要更精益求精。就像在一辆能发动的车上去安装各种零件来提升使用者的体验。这些零件就是构建工具所需要的插件，这些插件对提升开发效率很有帮助，包括语法转换（Babel），模板热更新（HotModuleReplacementPlugin），清理重复的打包的文件（clean-webpack-plugin）等等。</p><p>构建工具目前来说还在处于不停发展的阶段，但是相应的打包技术已经很成熟。 本次主要介绍市面上比较火热的Grunt， Webpack, Vite这三个打包工具之间的对比和它们的优势。</p><h4 id="构建工具介绍">构建工具介绍</h4><p>Grunt: 是一个优化前端的开发流程的工具。<br>配置一系列的task，定义task处理的事务（例如文件压缩合并、启动server、版本控制等），然后定义执行顺序，来让Grunt执行这些task，从而构建项目的整个前端开发流程。<br>工作方式：<br><img data-src="https://segmentfault.com/img/bVcXSBt" alt="image.png"></p><p>Wepack: 是一种模块化的解决方案。更强调模块化。<br>把你的项目当做一个整体，通过一个指定的主文件名（index.js, 一般是入口文件），webpack 将从这个文件开始找到你的项目所依赖的文件，使用loaders 来处理它们，最后打包为一个浏览器可识别的js 文件。<br><img data-src="https://segmentfault.com/img/bVcXSBQ" alt="image.png"></p><p>Vite: 一种新型前端构建工具,它区别与不同的打包工具,它在开发环境中不对项目进行整体打包。<br>原因：当我们的构建的项目越来越庞大时，对整个项目进行资源整合的时间会变长，如果有数千个模块的项目在进行构建时甚至需要几分钟才能启动开发服务器。所以vite解决了在开发过程中需要等待整个项目打包这一段过程，让开发时更加丝滑。<br>依赖：使用esbuild（GO编写）预构建依赖，比 JavaScript 编写的打包器预构建依赖快 10-100 倍。<br>源码：在浏览器请求资源时-&gt; vite转换一些非js文件-&gt;动态导入代码。<br>源码利用浏览器的协商缓存（304 Not Modified），依赖模块请求则会通过 Cache-Control: max-age=31536000, immutable 进行强缓存，保持热更新的速度。<br><img data-src="https://segmentfault.com/img/bVcXSCe" alt="image.png"></p><h4 id="如何选择适合的构建工具？">如何选择适合的构建工具？</h4><p>Grunt对于一些中小型项目而言更加轻便和灵活，如果只针对代码压缩合并，Grunt就可以满足要求，发展历程长，基本是稳定的。但是如果要处理庞大的项目文件，特别是处理多种类型的资源文件，强调模块开发，Webpack则更适合这个场景。Webpack对于中大型项目而言是更加稳定的，文档资料和迭代速度也很快。当然这对开发人员而言也是挺头疼的，隔一段时间就需要去适应文档的配置。Vite作为一门新的构建技术，想要它去构建一门稳定的中大型项目有点冒险，虽然已经发布稳定版本，但是还是会有一些潜在的风险，等它更多人推广后使用更加稳妥，但是对于平时构建一些个人网站和项目等使用vite，感受一下它的便捷也可以。</p><h4 id="什么是webpack">什么是webpack</h4><p>webpack是一种前端资源构建工具，一个静态模块打包器(module bundler)。 在 webpack看来,前端的所有资源文件(js/json/css/img/less/…)都会作为模块处理。 它将根据模块的依赖关系进行静态分析，打包生成对应的静态资源(bundle)。</p><p><img data-src="image-20220707224530157.png" alt=""></p><h4 id="理解module、chunk、bundle">理解module、chunk、bundle</h4><p>在 webpack 中，一切皆module，任何一个文件都可以看成是module。js、css、图片等都是module<br>webpack 会将入口文件以及它的依赖引入到一个 chunk 中，然后进过一系列处理打包成bundle</p><p><img data-src="https://upload-images.jianshu.io/upload_images/1429074-480bfe042659b296.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/772/format/webp" alt="img"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span c</summary>
+    <summary type="html">&lt;h4 id=&quot;什么是构建工具&quot;&gt;什么是构建工具&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;事实上随着前端的快速发展，目前前端的开发已经变的越来越复杂了：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;比如开发过程中我们需要通过模块化的方式来开发；&lt;/p&gt;
+&lt;p&gt;比如也会使用一些高级的特性来加快我们的开</summary>
       
     
     
     
+    <category term="webpack" scheme="http://laoxu.fun/categories/webpack/"/>
+    
+    
+    <category term="webpack" scheme="http://laoxu.fun/tags/webpack/"/>
     
   </entry>
   
