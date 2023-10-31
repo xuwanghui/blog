@@ -5,66 +5,66 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 6.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/blog/css/main.css">
 
 <link rel="stylesheet" href="https://fonts.font.im/css?family=HarmonyOS_Regular:300,300italic,400,400italic,700,700italic|JetBrains Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
+  <link rel="stylesheet" href="/blog/lib/pace/pace-theme-minimal.min.css">
+  <script src="/blog/lib/pace/pace.min.js"></script>
 
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"laoxu.live","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"gitee.com","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="Vue 是一套用于构建用户界面的 渐进式框架 。 与其它大型框架不同的是，Vue 采用自底向上增量开发的设计。 Vue 的核心库只关注视图层，并且非常容易学习，非常容易与其它库或已有项目整合。另一方面，Vue 完全有能力驱动采用单文件组件和Vue生态系统支持的库开发的复杂单页应用。 Vue.js 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。 最初它不过是个人项目，时至今日">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue2 学习">
-<meta property="og:url" content="http://laoxu.live/2023/08/09/vue2/index.html">
+<meta property="og:url" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/index.html">
 <meta property="og:site_name" content="君安">
 <meta property="og:description" content="Vue 是一套用于构建用户界面的 渐进式框架 。 与其它大型框架不同的是，Vue 采用自底向上增量开发的设计。 Vue 的核心库只关注视图层，并且非常容易学习，非常容易与其它库或已有项目整合。另一方面，Vue 完全有能力驱动采用单文件组件和Vue生态系统支持的库开发的复杂单页应用。 Vue.js 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。 最初它不过是个人项目，时至今日">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/image-20220717092054413.png">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/image-20220717093650297.png">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/image-20220717222557950.png">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/image-20220717190728013.png">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/image-20220717141517491.png">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/image-20220717141542239.png">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/image-20220719063621256.png">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/image-20220719064017901.png">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/image-20220719224700549.png">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/image-20220724232550182.png">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/image-20230904105500377.png">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/image-20230904105554409.png">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/image-20230904105644353.png">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/image-20220818223322981.png">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/image-20220806221424270.png">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/image-20220807162559080.png">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/image-20220807164044643.png">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/image-20220810195202522.png">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/image-20220810195246652.png">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/image-20220810195301394.png">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/image-20220810215011034.png">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/image-20220810215047621.png">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/image-20220814212828028.png">
-<meta property="og:image" content="http://laoxu.live/2023/08/09/vue2/image-20220814213141375.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20220717092054413.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20220717093650297.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20220717222557950.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20220717190728013.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20220717141517491.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20220717141542239.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20220719063621256.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20220719064017901.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20220719224700549.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20220724232550182.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20230904105500377.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20230904105554409.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20230904105644353.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20220818223322981.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20220806221424270.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20220807162559080.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20220807164044643.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20220810195202522.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20220810195246652.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20220810195301394.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20220810215011034.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20220810215047621.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20220814212828028.png">
+<meta property="og:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20220814213141375.png">
 <meta property="og:image" content="data:image/png;base64,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">
 <meta property="article:published_time" content="2023-08-08T16:56:58.159Z">
 <meta property="article:modified_time" content="2023-10-31T00:56:09.029Z">
 <meta property="article:author" content="老许">
 <meta property="article:tag" content="vue">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://laoxu.live/2023/08/09/vue2/image-20220717092054413.png">
+<meta name="twitter:image" content="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/image-20220717092054413.png">
 
-<link rel="canonical" href="http://laoxu.live/2023/08/09/vue2/">
+<link rel="canonical" href="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/">
 
 
 <script id="page-configurations">
@@ -111,7 +111,7 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/atom.xml" title="君安" type="application/atom+xml">
+<link rel="alternate" href="/blog/atom.xml" title="君安" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -131,7 +131,7 @@
 
   <div class="site-meta">
 
-    <a href="/" class="brand" rel="start">
+    <a href="/blog/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <h1 class="site-title">君安</h1>
       <span class="logo-line-after"><i></i></span>
@@ -153,37 +153,37 @@
   <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+    <a href="/blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">10</span></a>
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">10</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a>
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a>
 
   </li>
         <li class="menu-item menu-item-resources">
 
-    <a href="/resources/" rel="section"><i class="fa fa-download fa-fw"></i>资源</a>
+    <a href="/blog/resources/" rel="section"><i class="fa fa-download fa-fw"></i>资源</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">11</span></a>
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">11</span></a>
 
   </li>
         <li class="menu-item menu-item-comments">
 
-    <a href="/comments/" rel="section"><i class="fa fa-comments fa-fw"></i>留言板</a>
+    <a href="/blog/comments/" rel="section"><i class="fa fa-comments fa-fw"></i>留言板</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -248,10 +248,10 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://laoxu.live/2023/08/09/vue2/">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
       <meta itemprop="name" content="老许">
       <meta itemprop="description" content="喧闹任其喧闹 自有我自为之">
     </span>
@@ -287,7 +287,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a>
+                  <a href="/blog/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a>
                 </span>
             </span>
 
@@ -307,8 +307,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2023/08/09/vue2/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2023/08/09/vue2/" itemprop="commentCount"></span>
+    <a title="valine" href="/blog/2023/08/09/vue2/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/blog/2023/08/09/vue2/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -1479,7 +1479,7 @@ css样式放在页面前面<br>
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://laoxu.live/2023/08/09/vue2/" title="vue2 学习">http://laoxu.live/2023/08/09/vue2/</a>
+    <a href="https://gitee.com/xuwanghui/blog/2023/08/09/vue2/" title="vue2 学习">https://gitee.com/xuwanghui/blog/2023/08/09/vue2/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -1491,7 +1491,7 @@ css样式放在页面前面<br>
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/vue/" rel="tag"><i class="fa fa-tag"></i> vue</a>
+              <a href="/blog/tags/vue/" rel="tag"><i class="fa fa-tag"></i> vue</a>
           </div>
 
         
@@ -1500,11 +1500,11 @@ css样式放在页面前面<br>
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/08/09/uniapp/" rel="prev" title="uniapp 学习">
+    <a href="/blog/2023/08/09/uniapp/" rel="prev" title="uniapp 学习">
       <i class="fa fa-chevron-left"></i> uniapp 学习
     </a></div>
       <div class="post-nav-item">
-    <a href="/2023/08/09/vue3/" rel="next" title="vue3 学习">
+    <a href="/blog/2023/08/09/vue3/" rel="next" title="vue3 学习">
       vue3 学习 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -1573,27 +1573,27 @@ css样式放在页面前面<br>
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="老许"
-      src="/images/avatar.gif">
+      src="/blog/images/avatar.gif">
   <p class="site-author-name" itemprop="name">老许</p>
   <div class="site-description" itemprop="description">喧闹任其喧闹 自有我自为之</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
+          <a href="/blog/archives/">
         
           <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="/categories/">
+            <a href="/blog/categories/">
           
         <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/tags/">
+            <a href="/blog/tags/">
           
         <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">标签</span></a>
@@ -1605,17 +1605,17 @@ css样式放在页面前面<br>
         <a href="https://github.com/xuwanghui" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;xuwanghui" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
       </span>
       <span class="links-of-author-item">
-        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
+        <a href="/blog/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
       </span>
       <span class="links-of-author-item">
-        <a href="/xu_wang_hui@163.com" title="E-Mail → xu_wang_hui@163.com"><i class="fa fa-envelope fa-fw"></i></a>
+        <a href="/blog/xu_wang_hui@163.com" title="E-Mail → xu_wang_hui@163.com"><i class="fa fa-envelope fa-fw"></i></a>
       </span>
       <span class="links-of-author-item">
         <a href="https://twitter.com/yourname" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i></a>
       </span>
   </div>
   <div class="cc-license motion-element" itemprop="license">
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/blog/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
   </div>
 
 
@@ -1711,24 +1711,24 @@ setInterval("createtime()",250);
 
   
   
-  <script color='51,51,51' opacity='0.5' zIndex='-1' count='66' src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/pjax/pjax.min.js"></script>
+  <script color='51,51,51' opacity='0.5' zIndex='-1' count='66' src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="/blog/lib/pjax/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
 
-<script src="/js/utils.js"></script>
+<script src="/blog/js/utils.js"></script>
 
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
+<script src="/blog/js/motion.js"></script>
 
 
-<script src="/js/next-boot.js"></script>
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
 
   <script>
 var pjax = new Pjax({
@@ -1798,7 +1798,7 @@ window.addEventListener('pjax:success', () => {
 
 
   
-<script src="/js/local-search.js"></script>
+<script src="/blog/js/local-search.js"></script>
 
 
 
